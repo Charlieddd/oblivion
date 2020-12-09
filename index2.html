@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Precision Mule</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+<body>
+    <div id="panel">
+        <div id="controls">
+            <img src="./img/logo-green.png" alt="Precision Mule" width="191px">
+            <div class="sub-controls input">
+            Mission Path Width (in Meters):<input type="text" name="pathWidth" id="pathWidth" value="0.5" oninput="pathWidthOnInput(this.value)" required>
+            Mission Heading (in Degrees):<input type="text" name="heading" id="heading" value="0" oninput="headingOnInput(this.value)" required>
+            </div>
+            <div class="sub-controls">
+                <button id="buildMissionBtn">Build Mission</button>
+                <button id="downloadWaypointsBtn">Download Waypoint File</button>
+            </div>
+            <div class="sub-controls">
+                <button id="addCircleObstacleBtn">Add Circle Obstacle</button>
+                <button id="addPolyObstacleBtn">Add Freeform Obstacle</button>
+            </div>
+            <div class="sub-controls">
+                <button id="deleteBtn">Delete Selected Shape</button>
+            </div>
+            <div class="sub-controls">
+                <button id="savePolygonBtn">Save Polygon to Cache</button>
+                <button id="loadPolygonBtn">Load Cached Polygon</button>
+            </div>
+            <div class="sub-controls">
+                <div>
+                    Import Polygon file:
+                    <input type="file" name="file" id="file">
+                </div>
+                <button id="downloadPolygonBtn">Download Polygon File</button>
+            </div>
+            <div class="sub-controls">
+                <div>
+                    <label for="showWaypointNumber">
+                            <input type="checkbox" onclick="updateMissionPathPolylineMarkers()" id="showWaypointNumbersCheckbox">Show waypoint #s
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script type="text/javascript" src="index.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXaBXU51BxNj6WuqdU-JHx5oIVR5uM350&callback=initMap&libraries=drawing,geometry"
+        async defer></script>
+</body>
+
+</html>
