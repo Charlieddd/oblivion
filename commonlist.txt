@@ -1,0 +1,3 @@
+git commit -am "make it better"
+
+pushing for heroku:
