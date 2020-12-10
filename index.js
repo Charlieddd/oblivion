@@ -107,6 +107,7 @@ if (typeof (Number.prototype.toDeg) === "undefined") {
 // document.getElementById shorthand
 // credit: https://stackoverflow.com/questions/6398787/javascript-shorthand-for-getelementbyid
 let $ = function (id) { return document.getElementById(id); };
+
 /**
  * credit: https://stackoverflow.com/questions/10223898/draw-line-in-direction-given-distance-google-maps
  *
