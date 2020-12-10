@@ -15,5 +15,7 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
 const indexRouter = require('./routes/index')
 app.use('/', indexRouter)
+const accountRouter = require('./routes/account')
+app.use('/account', accountRouter)
 
 app.listen(process.env.PORT || 3000)
