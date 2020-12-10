@@ -1,0 +1,31 @@
+<div class="menu-btn">
+    <div class="menu-btn__burger"></div>
+</div>
+<div class="menu-hamburger">
+    <ul>
+        <li class="h-nav-item"><a href="#">rover1</a></li>
+        <li class="h-nav-item"><a href="#">rover2</a></li>
+        <li class="h-nav-item"><a href="#">rover3</a></li>
+        <li class="h-nav-item"><a href="#">rover4</a></li>
+        <li class="h-nav-item"><a href="#">rover5</a></li>
+    </ul>
+</div>
+<script>
+    
+    const menuBtn = document.querySelector('.menu-btn');
+    const menuburger = document.querySelector('.menu-hamburger');
+    let menuOpen = false;
+    console.log("yes" + menuBtn)
+
+    menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+      menuBtn.classList.add('open');
+      menuburger.classList.add('open');
+      menuOpen = true;
+    } else {
+      menuBtn.classList.remove('open');
+      menuburger.classList.remove('open');
+      menuOpen = false;
+    }
+});
+</script>
