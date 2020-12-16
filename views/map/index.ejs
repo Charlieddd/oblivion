@@ -1,3 +1,43 @@
+<div id="panel">
+    <div id="controls">
+        <div class="sub-controls input">
+        Mission Path Width (in Meters):<input type="text" name="pathWidth" id="pathWidth" value="0.5" oninput="pathWidthOnInput(this.value)" required>
+        Mission Heading (in Degrees):<input type="text" name="heading" id="heading" value="0" oninput="headingOnInput(this.value)" required>
+        </div>
+        <div class="sub-controls">
+            <button id="buildMissionBtn">Build Mission</button>
+            <button id="downloadWaypointsBtn">Download Waypoint File</button>
+        </div>
+        <div class="sub-controls">
+            <button id="addCircleObstacleBtn">Add Circle Obstacle</button>
+            <button id="addPolyObstacleBtn">Add Freeform Obstacle</button>
+        </div>
+        <div class="sub-controls">
+            <button id="deleteBtn">Delete Selected Shape</button>
+        </div>
+        <div class="sub-controls">
+            <button id="savePolygonBtn">Save Polygon to Cache</button>
+            <button id="loadPolygonBtn">Load Cached Polygon</button>
+        </div>
+        <div class="sub-controls">
+            <div>
+                Import Polygon file:
+                <input type="file" name="file" id="file">
+            </div>
+            <button id="downloadPolygonBtn">Download Polygon File</button>
+        </div>
+        <div class="sub-controls">
+            <div>
+                <label for="showWaypointNumber">
+                        <input type="checkbox" onclick="updateMissionPathPolylineMarkers()" id="showWaypointNumbersCheckbox">Show waypoint #s
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- map -->
+
 <div id = "map"></div>
 <script>
     let map;

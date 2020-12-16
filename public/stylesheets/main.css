@@ -6,6 +6,23 @@ html, body {
   width: 100%;
   padding: 0;
 }
+#map{
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background: #122836;
+  text-align: center;
+}
+
+#welcome {
+  
+  font-family: LucidaGrande-Bold;
+  font-size: 38px;
+  color: #E0E0E0;
+  background: #122836;
+  margin-top: 20px;
+}
 .main{
   margin: 0;
   height: 100%;
@@ -21,20 +38,25 @@ html, body {
 } 
 
 .header{
-  font-family: LucidaGrande-Bold;
-  font-size: 38px;
-  color: #E0E0E0;
+
   background: #424242;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 10px;
-  padding-top: 10px;
   box-sizing: border-box;
   border-bottom: 4px solid #E0E0E0;
   z-index: 5;
   grid-area: hd; 
 }
+#head-nav{
+  list-style: none;
+  position: relative;
+  bottom: 10px;
+}
 
+#head-nav a{
+  color: #E0E0E0;
+  text-decoration: none;
+  font-family: LucidaGrande-Bold;
+  font-size: 38px;
+}
 
 #panel 
 {
@@ -77,11 +99,7 @@ html, body {
   margin: 0;
   grid-area: side; 
   border-right: 4px solid #E0E0E0;
-}
-
-#map{
-  grid-area: main;
-  height: 100%
+  overflow: hidden;
 }
 
 
@@ -102,9 +120,10 @@ html, body {
 
 
 .navigation{
-  position: absolute;
+  position: relative;
   left:-30px;
-  margin-top: 15px;
+  margin-right: auto;
+  overflow: hidden;
 }
 
 .nav-item{
@@ -114,6 +133,7 @@ html, body {
   border-bottom: 2px solid #E0E0E0;
   padding: 10px 50px 0px 10px;
 }
+
 
 .nav-item a{
   text-decoration: none;
