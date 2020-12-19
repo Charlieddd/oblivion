@@ -5,8 +5,10 @@ html, body {
   height: 100%;
   width: 100%;
   padding: 0;
+  border: none;
 }
 #map{
+
   grid-area: main;
   height: 100%;
   width: 100%;
@@ -14,6 +16,19 @@ html, body {
   background: #122836;
   text-align: center;
 }
+
+#drive{
+  grid-area: main;
+  margin-left: auto;
+  margin-right: 370px;
+  margin-top: 25px;
+  z-index: 1;
+}
+
+#stream{
+  z-index: 1;
+}
+
 
 #welcome {
   
